@@ -36,22 +36,17 @@ namespace programmingblockchain
 
             var paymentScript = publicKeyHash.ScriptPubKey;
             var sameMainNetAddress = paymentScript.GetDestinationAddress(Network.Main);
-            Console.WriteLine(mainNetAddress == sameMainNetAddress); // True
+            Console.WriteLine($"mainNetAddress == sameMainNetAddress? {mainNetAddress == sameMainNetAddress}"); // True
 
             var samePublicKeyHash = (KeyId) paymentScript.GetDestination();
-            Console.WriteLine(publicKeyHash == samePublicKeyHash); // true
+            Console.WriteLine($"publicKeyHash == samePublicKeyHash? {publicKeyHash == samePublicKeyHash}"); // true
 
             var sameMainNetAddress2 = new BitcoinPubKeyAddress(samePublicKeyHash, Network.Main);
-            Console.WriteLine(mainNetAddress == sameMainNetAddress2);
+            Console.WriteLine($"mainNetAddress == sameMainNetAddress2? {mainNetAddress == sameMainNetAddress2}");
 
             Console.WriteLine("\nPrivate Key--------------\n");
 
-
-
-
-
-
-
+            
 
             Console.WriteLine();
             
